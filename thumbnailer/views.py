@@ -24,7 +24,8 @@ class HomeView(View):
         context = {}
 
         if form.is_valid():
-            file_path = os.path.join(settings.IMAGES_DIR, request.FILES['image_file'].name)
+            file_path = os.path.join(settings.IMAGES_DIR,
+                                     request.FILES['image_file'].name)
 
             with open(file_path, 'wb+') as fp:
                 for chunk in request.FILES['image_file']:
@@ -34,6 +35,7 @@ class HomeView(View):
 
             context['task_id'] = task.id
             context['task_status'] = task.status
+            context['form'] = FileUploadForm()
 
             return render(request, 'thumbnailer/home.html', context)
 
