@@ -10,5 +10,5 @@ An image resizing webapp built with Django and a sprinkle of Vue.js. Built in th
 - Create and initialize Python3 Virtual Enviroment
 - Install requirements
 - Launch redis server in one terminal tab: `redis-server`
-- Run celery worker in another tab within the virtual environment: `celery worker -A image_parroter --loglevel=info`
+- Run celery worker in another tab within the virtual environment: `celery worker -A config --loglevel=info`
 - Start Django Server in another tab: `python manage.py runserver`
