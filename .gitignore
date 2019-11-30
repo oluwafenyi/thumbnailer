@@ -1,0 +1,5 @@
+.python-version
+env/
+__pycache__/
+media/
+.vscode/
